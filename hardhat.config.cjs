@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@chainlink/env-enc").config()
 require("./tasks/index.cjs")
+require("hardhat-deploy")
 
 const SEPOLIA_URL = process.env.SEPOLIA_URL
 const PRIVATE_KEY = process.env.PRIVATE_KEY
@@ -20,6 +21,14 @@ module.exports = {
   etherscan: {
     apiKey:{
       sepolia: ETHERSCAN_API_KEY
+    }
+  },
+  namedAccounts: {
+    deployer: {
+      default: 0, // 第一个账户作为部署者
+    },
+    firstAccount: {
+      default: 1, // 第二个账户作为 firstAccount
     }
   }
 };
