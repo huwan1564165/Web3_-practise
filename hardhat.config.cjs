@@ -24,11 +24,11 @@ module.exports = {
     }
   },
   namedAccounts: {
-    deployer: {
-      default: 0, // 第一个账户作为部署者
-    },
     firstAccount: {
-      default: 1, // 第二个账户作为 firstAccount
+      default: 0, 
+    },
+    secondAccount: {
+      default: 1, 
     }
   }
 };

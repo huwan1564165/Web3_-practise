@@ -1,4 +1,4 @@
-import { expect } from "chai";
+const { expect } = require("chai")
 
 describe("MyTokens 合约测试", function () {
   let MyTokens;
